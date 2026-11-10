@@ -1,0 +1,32 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.tvkouame.studio'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.tvkouame.studio"
+        minSdk 23
+        targetSdk 34
+        versionCode 5
+        versionName "1.4"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    // Encodeur MP3 (LAME) pour la conversion après enregistrement
+    implementation 'com.github.naman14:TAndroidLame:1.1'
+}
